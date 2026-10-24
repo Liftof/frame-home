@@ -249,41 +249,30 @@ body[data-appearance="light"] #preview-label{color:#3d506980}
 .panel-version{display:none}
 
 
-/* Live is built only when opened; channel marks stay in their original colours. */
-#live-screen{top:140px;left:80px;width:1760px;height:940px}
-.live-scroll{height:100%;overflow-y:auto;overflow-x:hidden;padding:36px 28px 65px;scrollbar-width:none;overscroll-behavior:contain;overflow-anchor:none}
+/* Live TV: two quiet groups, artwork only. Surfaces share the app focus geometry. */
+#live-screen{top:156px;left:80px;width:1760px;height:924px}
+.live-scroll{height:100%;overflow-y:auto;overflow-x:hidden;padding:32px 28px 65px;scrollbar-width:none;overscroll-behavior:contain;overflow-anchor:none}
 .live-scroll::-webkit-scrollbar{display:none}
 .live-section{margin-bottom:68px}
-.live-heading{display:flex;align-items:baseline;justify-content:space-between;padding:0 1px;margin:2px 0 12px}
-.live-heading h2{font-size:31px;letter-spacing:-.9px;font-weight:600;margin:0}
-.live-heading>span{font-size:17px;color:#ffffff70}
-.live-grid{padding:26px 0 0}
-.live-card{height:200px;text-align:center}
-.live-card:after{bottom:47px}
-.live-caption{display:block;font-size:15px;font-weight:450;color:#ffffff94;margin-top:16px;white-space:nowrap}
-.live-card.focused .live-caption{color:#fff}
+.live-heading{font-size:28px;letter-spacing:-.65px;font-weight:550;color:#ffffffb8;margin:0 0 8px;padding:0 1px}
+.live-grid{padding:24px 0 0}
+.live-card{height:var(--tile-height)}
 .channel-art{background:#151d28}
-.channel-art img{object-fit:contain;width:140px;height:140px;border-radius:0}
-.channel-bfm{background:#1616f1}
-.channel-aljazeera{background:#fff}
-.channel-cnn-headlines{background:#25282e}
-.channel-sky-news{background:#f7f8fa}
-.channel-reuters{background:#f8f9fa}
-.channel-bloomberg{background:#101318}
-.channel-france-tv5-info{background:#fff}
-.channel-aljazeera,.channel-sky-news,.channel-reuters,.channel-france-tv5-info{color:#182330}
-.channel-euronews{background:#125ee7}
-.live-note{font-size:17px;line-height:1.6;color:#ffffff82;margin:17px 1px 0;letter-spacing:-.12px}
+.channel-art img{position:absolute;inset:0;object-fit:contain;width:100%;height:100%;border-radius:inherit}
+.channel-art .channel-name{font-size:27px;line-height:1.15;font-weight:650;letter-spacing:-.7px;padding:20px;max-width:100%}
+.channel-bfm{background:linear-gradient(135deg,#1525ef,#0901c9)}
+.channel-aljazeera{background:linear-gradient(140deg,#fffef9,#f0eadc);color:#17294c}
+.channel-cnn-headlines{background:linear-gradient(130deg,#6b0908,#190204);color:#fff}
+.channel-sky-news{background:linear-gradient(145deg,#fff,#dce0e7);color:#222b35}
+.channel-reuters{background:linear-gradient(145deg,#fff,#eeeae4);color:#34383b}
+.channel-bloomberg{background:linear-gradient(140deg,#16241f,#0a1014);color:#fff}
+.channel-france-tv5-info{background:linear-gradient(145deg,#fff,#e5e9f0);color:#123eac}
+.channel-euronews{background:linear-gradient(135deg,#0083ff,#0054d9);color:#fff}
 body[data-screen="live"] footer{display:none}
-body[data-screen="live"] .wallpaper:after{background:linear-gradient(180deg,#08121e35,#08121ec4 22%,#08121eea 65%,#08121ef5)}
-
-body[data-appearance="light"] .live-heading>span,body[data-appearance="light"] .live-note,body[data-appearance="light"] .live-caption{color:#42536cb8}
-body[data-appearance="light"] .live-card.focused .live-caption{color:#172434}
-body[data-appearance="light"][data-screen="live"] .wallpaper:after{background:linear-gradient(180deg,#eaf0f530,#e7edf3c4 22%,#e7edf3ea 65%,#e7edf3f5)}
-
+body[data-screen="live"] .wallpaper:after{background:linear-gradient(180deg,#08121e35,#08121e80 28%,#08121eb8 68%,#08121ed9)}
+body[data-appearance="light"] .live-heading{color:#24354ac9}
+body[data-appearance="light"][data-screen="live"] .wallpaper:after{background:linear-gradient(180deg,#eaf0f530,#e7edf399 28%,#e7edf3c9 68%,#e7edf3e6)}
 
 /* One static native-icon surface. No readback, filters, animation or processing on focus. */
 .app-art canvas{position:absolute;inset:0;width:100%;height:100%;border-radius:inherit;z-index:1}
 .app-art.native-framed img{visibility:hidden}
-.channel-name{font-size:27px;font-weight:650;letter-spacing:-.7px;max-width:100%}
-.channel-art span{padding:20px}

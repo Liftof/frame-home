@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=1920,user-scalable=no">
   <title>Frame Home</title>
-  <link rel="stylesheet" href="style.css?v=0.8.0">
+  <link rel="stylesheet" href="style.css?v=0.8.1">
 </head>
 <body data-screen="home">
   <svg class="symbols" xmlns="http://www.w3.org/2000/svg"><defs>
@@ -39,8 +39,8 @@
 
     <main id="live-screen" class="screen hidden">
       <div id="live-scroll" class="live-scroll">
-        <section class="live-section"><div class="live-heading"><h2>Chaînes françaises</h2><span>Avec vos apps et Samsung TV+</span></div><div id="live-french" class="tile-grid live-grid" aria-label="Chaînes et apps françaises"></div><p class="live-note">TF1, France 2, France 3, CANAL+… franceinfo : choisissez la chaîne dans CANAL+.</p></section>
-        <section class="live-section"><div class="live-heading"><h2>News in English</h2><span>Free live channels</span></div><div id="live-english" class="tile-grid live-grid" aria-label="English live news"></div><p class="live-note">CNN Headlines est un flux distinct de CNN US. ABC, NBC et MSNBC : pas de direct disponible ici via Samsung TV+ France.</p></section>
+        <section class="live-section" aria-label="France"><h2 class="live-heading">France</h2><div id="live-french" class="tile-grid live-grid" aria-label="Chaînes et apps françaises"></div></section>
+        <section class="live-section" aria-label="International"><h2 class="live-heading">International</h2><div id="live-english" class="tile-grid live-grid" aria-label="English live news"></div></section>
       </div>
     </main>
 
@@ -73,7 +73,7 @@
       <button class="panel-row" data-action="wallpapers"><span class="theme-swatch"></span><span>Fond d’écran<small id="theme-label">Coast</small></span><b>›</b></button>
       <button class="panel-row" data-action="appearance"><svg><use href="#appearance"/></svg><span>Apparence<small id="appearance-label">Automatique · heure locale</small></span><b>›</b></button>
       <button class="panel-row" data-action="samsung"><svg><use href="#home"/></svg><span>Accueil Samsung</span><b>›</b></button>
-      <div class="panel-version">Frame Home · 0.8.0</div>
+      <div class="panel-version">Frame Home · 0.8.1</div>
     </aside>
 
     <div id="context-shade" class="context-shade hidden"></div>
@@ -83,17 +83,17 @@
     <span id="loading-status" class="visually-hidden" role="status">Chargement des applications</span>
     <div id="toast" role="status" aria-live="polite"></div>
   </div>
-  <script src="config.js?v=0.8.0"></script>
-  <script src="artwork.js?v=0.8.0"></script>
-  <script src="platform.js?v=0.8.0"></script>
-  <script src="catalogue.js?v=0.8.0"></script>
-  <script src="vendor/suncalc.js?v=0.8.0"></script>
-  <script src="solar.js?v=0.8.0"></script>
-  <script src="catalogue-cache.js?v=0.8.0"></script>
-  <script src="wallpapers-data.js?v=0.8.0"></script>
-  <script src="wallpapers.js?v=0.8.0"></script>
-  <script src="channels-data.js?v=0.8.0"></script>
-  <script src="live-tv.js?v=0.8.0"></script>
-  <script src="app.js?v=0.8.0"></script>
+  <script src="config.js?v=0.8.1"></script>
+  <script src="artwork.js?v=0.8.1"></script>
+  <script src="platform.js?v=0.8.1"></script>
+  <script src="catalogue.js?v=0.8.1"></script>
+  <script src="vendor/suncalc.js?v=0.8.1"></script>
+  <script src="solar.js?v=0.8.1"></script>
+  <script src="catalogue-cache.js?v=0.8.1"></script>
+  <script src="wallpapers-data.js?v=0.8.1"></script>
+  <script src="wallpapers.js?v=0.8.1"></script>
+  <script src="channels-data.js?v=0.8.1"></script>
+  <script src="live-tv.js?v=0.8.1"></script>
+  <script src="app.js?v=0.8.1"></script>
 </body>
 </html>

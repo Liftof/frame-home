@@ -68,3 +68,13 @@ python3 tools/build.py --public  # exclut tous les réglages et médias locaux
 Les deux produisent un WGT non signé dans `dist/`, lui-même ignoré par Git. Les chemins d’import, certificats et données de développement n’entrent pas dans le paquet. Ne diffusez pas un paquet personnalisé contenant vos médias, votre ville ou vos certificats sans l’avoir vérifié séparément.
 
 Le fond de l’accueil est distinct du **mode Art Samsung**. Pour changer les œuvres Art, utilisez les fonctions natives SmartThings/USB de votre modèle. Aucune galerie d’œuvres, clé réseau ou donnée de compte d’une TV privée n’est embarquée dans ce dépôt.
+
+## Cartes de chaînes
+
+Le même import s’applique aux chaînes Live TV : utilisez leur nom exact dans `--app` (par exemple `Al Jazeera English` ou `Reuters`). Le visuel reste dans `app/assets/local/`, et le build personnel le récupère via `cards`. Les noms accessibles restent présents, sans légendes visibles sous les cartes.
+
+```sh
+python3 tools/import_assets.py card --id reuters --app 'Reuters' --image /path/to/authorized-card.png
+```
+
+Pour une présentation précise, préparez une carte 508 × 306 avec le logo entier, sa couleur de fond et des marges équilibrées. Le dépôt public conserve des cartes typographiques aux couleurs des chaînes ; les visuels propriétaires importés localement ne sont jamais ajoutés au build `--public`.

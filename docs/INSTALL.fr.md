@@ -70,7 +70,7 @@ Après avoir téléchargé le dépôt et testé son aperçu :
 ```sh
 python3 tools/build.py --public
 mkdir -p local/signing
-cp dist/Frame-Home-0.8.0-unsigned.wgt local/signing/FrameHome.wgt
+cp dist/Frame-Home-0.8.1-unsigned.wgt local/signing/FrameHome.wgt
 tizen package -t wgt -s 'YOUR_CERTIFICATE_PROFILE' -- local/signing/FrameHome.wgt
 ```
 

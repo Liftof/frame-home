@@ -175,41 +175,44 @@
   function drawLive() {
     if (!liveDirty && $('live-french').children.length) return;
     var french=$('live-french'),english=$('live-english');french.innerHTML='';english.innerHTML='';
-    function provider(test,label) {
+    function provider(test) {
       var app=catalog.filter(function (a) { return test.test(a.name+' '+a.id); })[0];
       if (!app) return;
       var card=drawTile(app,false,false);card.classList.add('live-card','provider-card');
-      card.setAttribute('aria-label',app.name+' · '+label);
-      var caption=document.createElement('small');caption.className='live-caption';caption.textContent=label;card.appendChild(caption);french.appendChild(card);
+      french.appendChild(card);
     }
-    provider(/samsung.*tv.?plus|tvplus/i,'Ouvrir Samsung TV+');
-    provider(/canal|mycanal/i,'Choisir la chaîne dans CANAL+');
+    provider(/samsung.*tv.?plus|tvplus/i);
+    provider(/canal|mycanal/i);
     FrameChannels.filter(function (c) { return c.section==='french'; }).forEach(function (c) { french.appendChild(channelCard(c)); });
-    provider(/france.?tv|francetv/i,'Choisir la chaîne dans france.tv');
-    provider(/tf1/i,'Choisir la chaîne dans TF1+');
+    provider(/france.?tv|francetv/i);
+    provider(/tf1/i);
     FrameChannels.filter(function (c) { return c.section==='english'; }).forEach(function (c) { english.appendChild(channelCard(c)); });
     liveDirty=false;
   }
   function channelCard(channel) {
     var card=document.createElement('button');card.className='app-tile live-card channel-card';
-    card.setAttribute('data-action','channel');card.setAttribute('data-channel',channel.id);card.setAttribute('aria-label',channel.name+' · Direct Samsung TV+');
+    card.setAttribute('data-action','channel');card.setAttribute('data-channel',channel.id);card.setAttribute('aria-label',channel.name);
     var art=document.createElement('span');art.className='app-art channel-art channel-'+channel.id;
     var label=document.createElement('span');label.className='channel-name';label.textContent=channel.name;art.appendChild(label);
-    if (channel.logo) {
-      var img=document.createElement('img');img.decoding='async';img.src=channel.logo;img.alt='';
-      img.onload=function () { label.classList.add('hidden'); };
+    var custom=window.FrameConfig && FrameConfig.cards && FrameConfig.cards[channel.name.toLowerCase()];
+    var source=custom || channel.logo;
+    if (source) {
+      var img=document.createElement('img');img.decoding='async';img.src=source;img.alt='';
+      img.onload=function () {
+        label.classList.add('hidden');
+        if (window.FrameArtwork) FrameArtwork.fit(art,img);
+      };
       img.onerror=function () { this.remove();label.classList.remove('hidden'); };
       art.appendChild(img);
     }
-    card.appendChild(art);
-    var caption=document.createElement('small');caption.className='live-caption';caption.textContent=channel.name==='CNN Headlines' ? 'CNN Headlines · Direct' : 'Direct · Samsung TV+';card.appendChild(caption);return card;
+    card.appendChild(art);return card;
   }
   function openChannel(id) {
     var channel=FrameChannels.filter(function (c) { return c.id===id; })[0];
     if (!channel || busy) return;
-    busy=true;toast('Ouverture de '+channel.name+'…');
+    busy=true;$('loading-status').textContent='Ouverture de '+channel.name;
     FrameLiveTV.tune(channel,function (error,result) {
-      busy=false;
+      busy=false;$('loading-status').textContent='';
       if (error) toast('Cette chaîne ne répond pas. Réessayez dans Samsung TV+.');
       else if (result && result.preview) toast('Aperçu : direct simulé de '+channel.name+'.');
       else { clearTimeout(toastTimer);$('toast').classList.remove('visible'); }

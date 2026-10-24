@@ -15,7 +15,7 @@
 
 Un accueil inspiré de tvOS : un beau paysage, six apps, une sélection fluide et les bons réglages à portée de télécommande. Frame Home est une application Tizen autonome ; le système Samsung et ses applications restent en place.
 
-**Version publique expérimentale 0.8.0.** Le prototype dont elle est issue a été utilisé sur une **The Frame LS03B (2022), Tizen 6.5, firmware 1720**. Les adaptations portables de cette version sont testées dans le navigateur et par les tests automatisés ; leur validation matérielle reste à compléter. [Compatibilité et limites](docs/COMPATIBILITY.md).
+**Version publique expérimentale 0.8.1.** Le prototype dont elle est issue a été utilisé sur une **The Frame LS03B (2022), Tizen 6.5, firmware 1720**. Les adaptations portables de cette version sont testées dans le navigateur et par les tests automatisés ; leur validation matérielle reste à compléter. [Compatibilité et limites](docs/COMPATIBILITY.md).
 
 Les captures utilisent des **apps de démonstration illustratives**, des pictogrammes originaux et des fonds créés pour ce projet. Sur une TV, le catalogue et les icônes proviennent de ses applications réellement installées. Aucune liste d’apps, photo de salon ou donnée de compte d’une installation privée n’est publiée.
 

@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.8.1 — minimal Live TV
+
+- Removed provider captions, explanatory paragraphs and the opening toast from Live TV.
+- Two compact groups, France and International, with artwork-only cards and unchanged remote navigation.
+- Channel surfaces now use coherent publisher colour backgrounds and the shared rounded focus geometry.
+- Optional local channel artwork uses the same `cards` configuration as app artwork; a missing image keeps a readable channel name.
+- No new privilege, background work, remote request or change to native channel tuning.
+
 ## 0.8.0 — public experimental release
 
 - Portable, fresh public source tree based on the working The Frame prototype.
