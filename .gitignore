@@ -1,0 +1,25 @@
+# Local configuration and imported images never belong in a public commit.
+local/
+app/assets/local/
+.env
+.env.*
+!.env.example
+dist/
+*.wgt
+*.p12
+*.pfx
+*.pem
+*.key
+*.token
+*.log
+*profiles.xml
+*device-profile.xml
+author-signature.xml
+signature1.xml
+.venv/
+__pycache__/
+*.pyc
+node_modules/
+.DS_Store
+.idea/
+.vscode/

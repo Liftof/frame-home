@@ -1,0 +1,2 @@
+# Optional local image import only; not needed to run, test or package the app.
+Pillow==12.3.0

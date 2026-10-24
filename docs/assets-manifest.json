@@ -1,0 +1,116 @@
+{
+  "assets": [
+    {
+      "file": "app/assets/demo/games.svg",
+      "bytes": 526,
+      "sha256": "c2418ba1ccf53df2f4e44f630a8e391fcacd6e497a28a0b9f73c78c3a0858670",
+      "license": "MIT (original project asset; see ASSETS.md)"
+    },
+    {
+      "file": "app/assets/demo/library.svg",
+      "bytes": 515,
+      "sha256": "da773a9bb814316f1d93871ead92ee2909101b1ebd4b84852d8b4cb98b13d7f2",
+      "license": "MIT (original project asset; see ASSETS.md)"
+    },
+    {
+      "file": "app/assets/demo/live.svg",
+      "bytes": 571,
+      "sha256": "300a1879c975cb9706435d4cba4785b9937f30925e8e75e056f0e723da103aa2",
+      "license": "MIT (original project asset; see ASSETS.md)"
+    },
+    {
+      "file": "app/assets/demo/movies.svg",
+      "bytes": 472,
+      "sha256": "d2486dc69790897067c3d1f74f0f03ea65675160019a20f0e56b27d845a76571",
+      "license": "MIT (original project asset; see ASSETS.md)"
+    },
+    {
+      "file": "app/assets/demo/music.svg",
+      "bytes": 529,
+      "sha256": "d978fc4127df374725c43880c4b4251860a9958b3643902a0b702b3ef21b6ff4",
+      "license": "MIT (original project asset; see ASSETS.md)"
+    },
+    {
+      "file": "app/assets/demo/series.svg",
+      "bytes": 507,
+      "sha256": "d223059cb18b2884f30c8f5ca91d50f5cd052cba07a56df224777410fc48307e",
+      "license": "MIT (original project asset; see ASSETS.md)"
+    },
+    {
+      "file": "app/assets/fonts/inter.woff2",
+      "bytes": 352240,
+      "sha256": "693b77d4f32ee9b8bfc995589b5fad5e99adf2832738661f5402f9978429a8e3",
+      "license": "SIL-OFL-1.1"
+    },
+    {
+      "file": "app/assets/wallpapers/coast-day-thumb.jpg",
+      "bytes": 33524,
+      "sha256": "0d6a41d35320ecd5d1f50854f524edaaae19e3d6b8d1a23670bcefc3cb1bb523",
+      "pixels": [
+        532,
+        299
+      ],
+      "license": "MIT (original project asset; see ASSETS.md)"
+    },
+    {
+      "file": "app/assets/wallpapers/coast-day.jpg",
+      "bytes": 450952,
+      "sha256": "33a18127b161c4db40705c6cf6ca1b943c040131cb6cfe55db646ac9b2910528",
+      "pixels": [
+        1672,
+        941
+      ],
+      "license": "MIT (original project asset; see ASSETS.md)"
+    },
+    {
+      "file": "app/assets/wallpapers/coast-night-thumb.jpg",
+      "bytes": 29520,
+      "sha256": "454b1c1dafd56f6d6a09050b30ef600d0d16264788cb99764262ec570c53648c",
+      "pixels": [
+        532,
+        299
+      ],
+      "license": "MIT (original project asset; see ASSETS.md)"
+    },
+    {
+      "file": "app/assets/wallpapers/coast-night.jpg",
+      "bytes": 413297,
+      "sha256": "e8ca8c21b566c2af0fd98615a328ece78b9128c212642f60631f92254e88655a",
+      "pixels": [
+        1672,
+        941
+      ],
+      "license": "MIT (original project asset; see ASSETS.md)"
+    },
+    {
+      "file": "app/icon.png",
+      "bytes": 1487,
+      "sha256": "04157f36f6f5e0d8a3a7c7460fb47b0d38fe5bc6843e47863a9282382d7a11c6",
+      "pixels": [
+        256,
+        256
+      ],
+      "license": "MIT (original project asset; see ASSETS.md)"
+    },
+    {
+      "file": "docs/images/home-dark.png",
+      "bytes": 99876,
+      "sha256": "15bc8fa07693e9f38b8ed0649b33aeb0a021882a6a86ab7f8aae0fde5b08b526",
+      "pixels": [
+        1280,
+        720
+      ],
+      "license": "MIT (original project asset; see ASSETS.md)"
+    },
+    {
+      "file": "docs/images/home-light.png",
+      "bytes": 136733,
+      "sha256": "13502ab4b838f2223927f418c0b83dc28824a023d4c32473656848b375786aa6",
+      "pixels": [
+        1280,
+        720
+      ],
+      "license": "MIT (original project asset; see ASSETS.md)"
+    }
+  ]
+}

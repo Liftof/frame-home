@@ -1,0 +1,18 @@
+Frame Home
+Code and original project artwork: MIT, copyright 2026 Frame Home contributors.
+
+Includes Inter v4.1 by the Inter Project Authors (SIL Open Font License 1.1),
+and SunCalc v1.9.0 by Vladimir Agafonkin (BSD 2-Clause).
+Public Tizen API integration draws on examples from Arn0 Launcher
+by Amaury Nelson (MIT). Full notices are in LICENSES/ in the package.
+
+The Coast wallpapers were generated for this project with OpenAI imagegen.
+They depict imagined landscapes and are not Apple wallpapers.
+The demo app icons and launcher icon are original project drawings.
+
+Apple, Apple TV and tvOS are trademarks of Apple Inc.
+Samsung and The Frame are trademarks of Samsung.
+This independent project is not affiliated with or endorsed by either company.
+Third-party native app icons are supplied by installed apps on the user's TV
+and are not distributed as part of this repository.
+See docs/ASSETS.md in the source repository for provenance and prompts.

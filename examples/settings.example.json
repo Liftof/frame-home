@@ -1,0 +1,13 @@
+{
+  "solar": {
+    "label": "Example city",
+    "latitude": 51.5074,
+    "longitude": -0.1278,
+    "timeZone": "Europe/London"
+  },
+  "channelProfile": "fr-tvplus",
+  "favoriteNames": [],
+  "cards": {},
+  "wallpapers": [],
+  "theme": "coast"
+}

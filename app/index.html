@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1920,user-scalable=no">
+  <title>Frame Home</title>
+  <link rel="stylesheet" href="style.css?v=0.8.0">
+</head>
+<body data-screen="home">
+  <svg class="symbols" xmlns="http://www.w3.org/2000/svg"><defs>
+    <symbol id="gamepad" viewBox="0 0 24 24"><path d="M7 7h10c3 0 5 8 4 11-1 2-4-1-6-3H9c-2 2-5 5-6 3C2 15 4 7 7 7Z"/><path d="M6 11h4m-2-2v4m7-2h.01m3 2h.01"/></symbol>
+    <symbol id="computer" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="13" rx="2"/><path d="M12 16v5m-5 0h10"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><path d="m9 5 11 7-11 7Z"/></symbol>
+    <symbol id="gear" viewBox="0 0 24 24"><path d="m9 3-.6 2a7 7 0 0 0-1.7 1L4.6 5.5 2.9 8.4l1.5 1.5a7 7 0 0 0 0 2L3 13.5l1.7 2.9 2.1-.5a7 7 0 0 0 1.7 1l.6 2h3.4l.6-2a7 7 0 0 0 1.7-1l2.1.5 1.7-2.9-1.5-1.6a7 7 0 0 0 0-2l1.5-1.5-1.7-2.9-2.1.5a7 7 0 0 0-1.7-1l-.6-2z" transform="translate(1 1)"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="apps" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></symbol>
+    <symbol id="hdmi" viewBox="0 0 24 24"><path d="M4 5h16v10l-4 4H8l-4-4zM8 9v4m4-4v4m4-4v4"/></symbol>
+    <symbol id="home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v11h-6v-7H9v7H3z"/></symbol>
+    <symbol id="back" viewBox="0 0 24 24"><path d="m14 5-7 7 7 7"/></symbol>
+    <symbol id="volume" viewBox="0 0 24 24"><path d="M11 4 6 8H2v8h4l5 4zM15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="appearance" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none"/></symbol>
+    <symbol id="check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="pin" viewBox="0 0 24 24"><path d="M9 3h6l-1 6 3 4v2H7v-2l3-4-1-6ZM12 15v6"/></symbol>
+  </defs></svg>
+  <div id="stage">
+    <div class="wallpaper"></div>
+    <header class="topbar">
+      <nav class="main-nav" aria-label="Navigation"><button data-action="home" class="nav-active">Accueil</button><button data-action="library">Apps</button><button data-action="live">Live TV</button></nav>
+      <div class="top-actions"><time id="time"></time><button class="round" data-action="settings" aria-label="Réglages"><svg><use href="#gear"/></svg></button></div>
+    </header>
+    <main id="home-screen" class="screen">
+      <div class="dock-wrap"><div id="favorites" class="tile-grid favorites" aria-label="Applications favorites" aria-busy="true"><span class="skeleton-tile" aria-hidden="true"></span><span class="skeleton-tile" aria-hidden="true"></span><span class="skeleton-tile" aria-hidden="true"></span><span class="skeleton-tile" aria-hidden="true"></span><span class="skeleton-tile" aria-hidden="true"></span><span class="skeleton-tile" aria-hidden="true"></span></div></div>
+      <section id="home-device-section" class="device-section hidden"><div class="row-heading"><h2>Appareils</h2><button class="row-link" data-action="sources">Périphériques <span>›</span></button></div><div id="home-devices" class="devices-row"></div></section>
+    </main>
+
+    <main id="library-screen" class="screen hidden">
+      <div id="library-grid" class="tile-grid scroll-grid" aria-label="Applications"></div>
+    </main>
+
+    <main id="live-screen" class="screen hidden">
+      <div id="live-scroll" class="live-scroll">
+        <section class="live-section"><div class="live-heading"><h2>Chaînes françaises</h2><span>Avec vos apps et Samsung TV+</span></div><div id="live-french" class="tile-grid live-grid" aria-label="Chaînes et apps françaises"></div><p class="live-note">TF1, France 2, France 3, CANAL+… franceinfo : choisissez la chaîne dans CANAL+.</p></section>
+        <section class="live-section"><div class="live-heading"><h2>News in English</h2><span>Free live channels</span></div><div id="live-english" class="tile-grid live-grid" aria-label="English live news"></div><p class="live-note">CNN Headlines est un flux distinct de CNN US. ABC, NBC et MSNBC : pas de direct disponible ici via Samsung TV+ France.</p></section>
+      </div>
+    </main>
+
+    <main id="wallpapers-screen" class="screen hidden">
+      <div class="page-heading"><div><h1>Fonds d’écran</h1></div></div>
+      <div id="wallpapers-grid" class="wallpapers-grid" aria-label="Fonds d’écran"></div>
+    </main>
+
+    <main id="sources-screen" class="screen hidden">
+      <div class="page-heading"><button class="round" data-action="home" aria-label="Retour"><svg><use href="#back"/></svg></button><div><span class="eyebrow">SUR GRAND ÉCRAN</span><h1>Vos sources</h1></div></div>
+      <div id="sources-grid" class="source-grid"></div>
+    </main>
+
+    <main id="error-screen" class="screen hidden">
+      <div class="heading"><span class="eyebrow">FRAME HOME</span><h1>Les apps ne répondent pas.</h1><p>Vous pouvez réessayer ou retrouver l’accueil Samsung.</p></div>
+      <button class="pill" data-action="reload">Réessayer</button><button class="pill" data-action="samsung">Accueil Samsung</button>
+    </main>
+
+    <div id="panel-shade" class="panel-shade hidden"></div>
+    <aside id="settings-panel" class="side-panel hidden" aria-label="Réglages">
+      <div class="panel-head"><h2>Réglages</h2><button class="round" data-action="close-panel" aria-label="Fermer"><svg><use href="#back"/></svg></button></div>
+      <div class="panel-section">SON</div>
+      <div class="volume-card"><svg><use href="#volume"/></svg><span id="volume-value">—</span><div class="volume-bar"><i id="volume-fill"></i></div></div>
+      <div class="volume-buttons"><button data-action="volume-down" aria-label="Baisser le volume">−</button><button data-action="mute" id="mute-button">Muet</button><button data-action="volume-up" aria-label="Augmenter le volume">+</button></div>
+      <div class="panel-section">VOTRE TÉLÉVISION</div>
+      <button class="panel-row" data-action="tv-settings"><svg><use href="#gear"/></svg><span>Réglages de la TV<small>Image, son, réseau et accessibilité</small></span><b>›</b></button>
+      <button class="panel-row" data-action="sources"><svg><use href="#hdmi"/></svg><span>Sources HDMI</span><b>›</b></button>
+      <div class="panel-section">VOTRE ACCUEIL</div>
+      <button class="panel-row" data-action="edit"><svg><use href="#apps"/></svg><span>Organiser les favoris</span><b>›</b></button>
+      <button class="panel-row" data-action="wallpapers"><span class="theme-swatch"></span><span>Fond d’écran<small id="theme-label">Coast</small></span><b>›</b></button>
+      <button class="panel-row" data-action="appearance"><svg><use href="#appearance"/></svg><span>Apparence<small id="appearance-label">Automatique · heure locale</small></span><b>›</b></button>
+      <button class="panel-row" data-action="samsung"><svg><use href="#home"/></svg><span>Accueil Samsung</span><b>›</b></button>
+      <div class="panel-version">Frame Home · 0.8.0</div>
+    </aside>
+
+    <div id="context-shade" class="context-shade hidden"></div>
+    <aside id="context-menu" class="context-menu hidden" aria-label="Options de l’application"><h2 id="context-name"></h2><div id="context-actions"></div></aside>
+    <div id="edit-hint" class="edit-hint hidden">← → Déplacer <span>OK Enregistrer</span><span>Retour Annuler</span></div>
+    <footer><span id="preview-label" class="hidden">APERÇU · APPAREILS SIMULÉS</span></footer>
+    <span id="loading-status" class="visually-hidden" role="status">Chargement des applications</span>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </div>
+  <script src="config.js?v=0.8.0"></script>
+  <script src="artwork.js?v=0.8.0"></script>
+  <script src="platform.js?v=0.8.0"></script>
+  <script src="catalogue.js?v=0.8.0"></script>
+  <script src="vendor/suncalc.js?v=0.8.0"></script>
+  <script src="solar.js?v=0.8.0"></script>
+  <script src="catalogue-cache.js?v=0.8.0"></script>
+  <script src="wallpapers-data.js?v=0.8.0"></script>
+  <script src="wallpapers.js?v=0.8.0"></script>
+  <script src="channels-data.js?v=0.8.0"></script>
+  <script src="live-tv.js?v=0.8.0"></script>
+  <script src="app.js?v=0.8.0"></script>
+</body>
+</html>
